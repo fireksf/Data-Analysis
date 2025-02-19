@@ -22,3 +22,14 @@ and gender ='Male';
 select Gender
 from Believers_list
 group by Gender;
+
+--order by
+select *
+from member_list
+order by firstname;
+
+--limit 
+select *
+from member_list
+where gender != 'male'
+limit 6;
