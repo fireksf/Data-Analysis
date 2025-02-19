@@ -1,2 +1,15 @@
+create database lwc_churchDB;
+Use lwc_churchDB; --creating dababase 
+--create tables 
+
+Create table Members_list( 
+ID int Auto_Increament Primary Key,
+First_Name Varchar(50),
+Last_Name Varchar(50),
+DOB Date,
+Gender Varchar(10),
+Contact Varchar(12)
+
+);
 select  * from Program_list
 Where Location ='Main Hall';
