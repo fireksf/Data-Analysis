@@ -41,3 +41,8 @@ from Believers_list
 where gender != 'male'
 order by dateofbirth desc
 limit 6;
+-- next possition of the current value by jumping the raw
+select *
+from Believers_list
+limit 3, 1 -- this start raw 4
+;
