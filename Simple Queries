@@ -33,3 +33,11 @@ select *
 from member_list
 where gender != 'male'
 limit 6;
+
+
+-- order and limit 
+select *
+from Believers_list
+where gender != 'male'
+order by dateofbirth desc
+limit 6;
