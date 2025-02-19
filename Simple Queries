@@ -1,0 +1,2 @@
+select  * from Program_list
+Where Location ='Main Hall';
