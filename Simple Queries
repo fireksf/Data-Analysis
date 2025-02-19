@@ -13,3 +13,12 @@ Contact Varchar(12)
 );
 select  * from Program_list
 Where Location ='Main Hall';
+
+--group by
+select  * from Believers_list
+Where DateOfBirth > '1990-01-01'
+and gender ='Male';
+
+select Gender
+from Believers_list
+group by Gender;
