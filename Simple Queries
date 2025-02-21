@@ -144,3 +144,37 @@ select locate('r','Firaol');
 
 select first_name, locate('a',first_name)
 From employee_demographics;
+
+
+
+-- case statement
+
+-- its logic argument do this when the logics is true or do then this. 
+-- eg, give salary icrease those salary is less 50000, 10% increase 
+--  or give salary increase those salary more than 50000 increase by 5% and give boness to finance departement 
+
+select *
+From employee_salary;
+select *
+From Parks_departments;
+
+select first_name, last_name , salary,
+case 
+when salary >=50000 then salary+(salary * 0.05)
+when salary <50000 then salary +(salary *0.10)
+end AS NEW_SALARY,
+case 
+when dept_id = 6 then salary +(salary * 0.10)
+end as BONUS
+From employee_salary;
+
+select first_name, last_name, age,
+case
+when age between 50 and 60 then 'Old'
+when age between 20 and 30 then 'very young'
+when age <50 then 'Young'
+when age >60 then 'Very Old'
+ 
+end As age_gap
+From employee_demographics;
+
