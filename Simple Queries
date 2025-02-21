@@ -92,3 +92,55 @@ where salary >70000
 order by first_name,last_name
 ;
 
+
+
+ -- concanation 
+ 
+select    first_name, last_name, 
+Concat(first_name,' ', last_name)    as Full_Name
+from employee_demographics; 
+
+-- substring 
+-- select the character from the string (word) what youre looking for 
+-- eg only select the first 2 char or select the last 3 char.
+
+select first_name, last_name,
+left (first_name,2),
+right(last_name,3)
+From employee_demographics;
+
+select first_name, last_name,
+concat(left(first_name,2) , right(last_name,3)) as magic_name
+From employee_demographics;
+
+
+
+select *
+From employee_demographics; 
+
+
+-- substring 
+select substring('Firaol',2,4);
+
+select first_name, last_name,
+substring(first_name,3,2),  
+birth_date,
+substring(birth_date,6,2) as birth_of_month
+From employee_demographics;
+
+-- replace function 
+-- replace is case sessetive 
+select  replace('Firaol', 'F','d');
+
+
+select first_name, replace(first_name,'a','z')
+From employee_demographics;
+
+-- locate function
+-- it return the possition of specific query eg locate 'r' in firaol, its return 3
+
+select locate('r','Firaol');
+
+
+select first_name, locate('a',first_name)
+From employee_demographics;
