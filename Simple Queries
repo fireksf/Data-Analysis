@@ -52,3 +52,43 @@ from Believers_list
 group by gender
 having avg(dateofbirth)
 ;
+
+
+select *
+From employee_demographics as dem
+Left join employee_salary as sal
+	on dem.employee_id= sal.employee_id;
+    
+    
+-- union 
+
+select first_name, last_name
+From employee_demographics
+union 
+select first_name, last_name
+from employee_salary;
+
+
+-- union all 
+select first_name, last_name
+From employee_demographics
+union all
+select first_name, last_name
+from employee_salary;
+
+
+-- lebal
+select first_name, last_name, 'old man' as lebal
+From employee_demographics
+where age >40 and gender ='male'
+union 
+select first_name, last_name, 'old lady' as lebal
+From employee_demographics as dem
+where age >40 and gender ='Female'
+union
+select first_name, last_name, 'Highly paid employee' AS lebal
+from employee_salary as sal
+where salary >70000
+order by first_name,last_name
+;
+
