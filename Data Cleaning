@@ -1,2 +1,13 @@
 -- Creating New Schema: 
+-- data cleaning mean: make the raw data, to Useable data. 
+-- Removing Dupplicate file 
+-- Formating: Standardizing the data, maybe date, country code, phone number or another data standard. 
+-- Delate some data : Null and blank, un labled column and rows 
+-- Always Remeber data is peice of information and sensative, take backup before any change. 
+-- Remember SQL is case sensetive and some function are the same with like words: eg. date is the query and also function. 
+
 CREATE SCHEMA `world_layoffs` ;
+
+-- to view imported data 
+Select *
+From layoffs;
