@@ -1,0 +1,2 @@
+-- Creating New Schema: 
+CREATE SCHEMA `world_layoffs` ;
