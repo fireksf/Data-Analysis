@@ -12,3 +12,109 @@ CREATE SCHEMA `world_layoffs` ;
 -- to view imported data 
 Select *
 From layoffs;
+
+-- view the data 
+select *
+From  layoffs; 
+
+-- remove dupplicated data 
+-- standardize data
+-- Remove Null value and Blank values 
+-- Delate any data not incompleted (row  and colums. )
+
+-- before doing any change its better to paractice data sefty regulation, make your 
+-- data copy to another table and make step by step stage data processing. 
+
+create table layoffs_staging
+like layoffs;
+
+select *
+From layoffs_staging;
+
+-- insert copy of the exiting table to new table (staging)
+Insert layoffs_staging
+select * 
+From layoffs;
+-- 16:00:25	Insert layoffs_staging select *  From layoffs	564 row(s) affected Records: 564  Duplicates: 0  Warnings: 0	0.054 sec
+-- at this stage we are make coppy of our data. 
+
+select *
+From layoffs_staging;
+
+-- very beginning remove the dupplicate 
+
+select distinct *
+from layoffs_staging  ;
+-- i dont know where is working or not exactly at this stage. so i should 
+-- find another to check wheather is dupplicate or not. bcoz maybe all the raw is unquie.
+-- so let us add new column that control the dupplication of each each and columns.  
+
+select * , row_number() 
+over(partition by company, industry, total_laid_off, percentage_laid_off, 'date') as row_num
+from layoffs_staging;
+
+Select * 
+From layoffs_staging
+where row_num > 1;
+
+select *
+From layoffs_staging;
+
+-- CTe
+-- common table expression 
+-- temporary table expression 
+with dupplicate_cte as (
+select * , 
+row_number() 
+over(partition by company, 
+industry,location, total_laid_off, 
+percentage_laid_off, 'date',stage, country, funds_raised_millions) as row_num
+from layoffs_staging
+)
+select * 
+from dupplicate_cte
+where row_num >1;
+
+-- at this stage i got on company only have dupplicate value. 
+select * 
+from layoffs_staging
+where company = 'Twitter';
+
+SET SQL_SAFE_UPDATES = 0;
+
+
+DELETE
+from layoffs_staging
+where company = 'Oyster';
+
+select company, Trim(company)
+From layoffs_staging
+order by 1;
+
+
+SELECT company, location,industry, COUNT(*) 
+FROM layoffs_staging
+GROUP BY company, location,industry
+HAVING COUNT(*) > 1;
+
+
+select * 
+from layoffs_staging
+where company = 'Intel';
+
+
+Update  layoffs_staging 
+set company = Trim(company);
+
+
+select  distinct location
+from layoffs_staging
+order by 1;
+
+
+select * 
+From layoffs_staging;
+
+
+
+
