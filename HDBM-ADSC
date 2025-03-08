@@ -1,0 +1,44 @@
+
+1. General Data Analyst Workflow
+A data analyst follows a structured workflow to solve business problems. Here’s a step-by-step approach:
+Step 1: Understanding the Business Problem
+Before touching the data, you need to understand the business context.
+•	Who is the stakeholder? (Hospital management, doctors, finance team, etc.)
+•	What problem are they facing? (Reducing patient wait times, improving resource allocation, increasing revenue, etc.)
+•	Why does it matter? (To improve patient satisfaction, optimize costs, etc.)
+Big Question
+A hospital might ask:
+"Why are some patients experiencing longer wait times than others?"
+Step 2: Identifying the Right Data
+•	What dataset(s) do you have?
+•	What columns (features) are available? {PATIENT NO,	PATIENT NAME,	MOBILE NUMBER,	REGISTRATION DATE,	NATIONALITY,	DOB,	AGE,	DOCTORS}
+•	Are there missing values or data quality issues? {Doctors_ID, Waiting_time,	Specialist}
+Example: If you're analyzing wait times, relevant columns might be:
+•	Patient ID
+•	Doctor Assigned
+•	Consultation Time
+•	Department
+Step 3: Cleaning and Preparing Data
+•	Handle missing data
+•	Fix inconsistencies
+•	Standardize formats
+•	Remove duplicates
+Example:
+If some patient records have missing consultation times, should you remove them or estimate them?
+Step 4: Exploring the Data (EDA - Exploratory Data Analysis)
+Use descriptive statistics & visualizations to find patterns, trends, and anomalies.
+•	What is the average wait time?
+•	Is there a pattern in peak hospital hours?
+•	Does a particular department have higher wait times?
+Use tools like:
+•	SQL (aggregations, joins, filtering)
+•	Excel (pivot tables, summary stats)
+•	Power BI (visualizations)
+Step 5: Generating Insights and Answering Business Questions
+•	What are the key findings?
+•	Are there correlations? (e.g., Longer wait times in certain departments?)
+•	What are the actionable recommendations?
+Step 6: Communicating Results
+•	Create a Power BI Dashboard
+•	Summarize key takeaways in a report
+•	Use storytelling: “We found that wait times are highest in the cardiology department due to a shortage of available doctors.”
