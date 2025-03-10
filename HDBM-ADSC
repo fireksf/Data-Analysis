@@ -22,7 +22,7 @@ Step 3: Cleaning and Preparing Data
 •	Handle missing data
 •	Fix inconsistencies
 •	Standardize formats
-•	Remove duplicates
+•	Remove duplicates.
 Example:
 If some patient records have missing consultation times, should you remove them or estimate them?
 Step 4: Exploring the Data (EDA - Exploratory Data Analysis)
