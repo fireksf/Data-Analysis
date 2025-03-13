@@ -905,4 +905,28 @@ for key, value in student.items():
 ```python
 
 ```
+grades = {"math": 80, 
+              "Physics": 96, 
+              "Chem": 88, 
+              "Biology": 97}
+
+def grade_calc(dictionary):
+    count = 0
+    for i in dictionary:
+        count+=1
+    count #no we found the count
+
+    addition=0
+    #let's find the sum
+    for i in dictionary:
+        addition += dictionary[i]
+    grade_avg= addition/count
+    print(f"the average grade is {grade_avg}")
+grade_calc(grades)
+
+name = input("What is your name? ").strip().title()
+print(f"Welcome to {name}")  # ✅ Corrected
+
+
+
 
