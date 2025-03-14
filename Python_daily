@@ -1,10 +1,9 @@
 # Variables In Python
 
-
-```python
+#python
 Name= {"name:","Firaol" ,"age:"32,"sex:"M"}
 print(Name)
-```
+
 
 
       Cell In[17], line 1
