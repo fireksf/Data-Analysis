@@ -809,7 +809,7 @@ for i in range(5):  # 0 to 4
 for i in range(2, 5):  # 2 to 4
     print(i)
 
-```
+
 
     2
     3
@@ -925,6 +925,9 @@ grade_calc(grades)
 
 name = input("What is your name? ").strip().title()
 print(f"Welcome to {name}")  # ✅ Corrected
+
+
+
 
 
 
