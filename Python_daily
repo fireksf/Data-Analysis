@@ -1,3 +1,38 @@
+#simple bakala order: 
+def main():
+    order()
+
+def order():
+    # Prices of items
+    prices = {"banana": 10, "coffee": 20, "orange": 15, "tea": 5}
+
+    # Get the number of items to order
+    num = int(input("How many items do you want to order? "))
+
+    total_price = 0  # To calculate the total cost
+
+    for _ in range(num):
+        order_one = input("Enter the first order: ").strip().lower()
+        order_two = input("Enter the second order: ").strip().lower()
+        order_three = input("Enter the third order: ").strip().lower()
+
+        # Get the price of each order, default to 0 if not in prices dictionary
+        price_order_one = prices.get(order_one, 0)
+        price_order_two = prices.get(order_two, 0)
+        price_order_three = prices.get(order_three, 0)
+
+        total_price += price_order_one + price_order_two + price_order_three
+
+        print(f"\nOrder Summary:")
+        print(f"1. {order_one.capitalize()} - {price_order_one} AED")
+        print(f"2. {order_two.capitalize()} - {price_order_two} AED")
+        print(f"3. {order_three.capitalize()} - {price_order_three} AED")
+    
+    print(f"\nTotal Price: {total_price} AED")
+
+main()
+
+
 # Variables In Python
 
 #python
