@@ -967,7 +967,17 @@ students = ["Hermione","Harry","Ron"]
 for i in range (len(students)):
     print(i+1,students[i])
 
+# Dictionary with multiple values in lists
+menu = {
+    "banana": [10, "yellow", "fruit"],
+    "coffee": [20, "brown", "beverage"],
+    "orange": [15, "orange", "citrus fruit"]
+}
 
+# Accessing multiple values
+print(menu["banana"])  # Output: [10, 'yellow', 'fruit']
+print(menu["banana"][0])  # Output: 10 (price)
+print(menu["banana"][1])  # Output: yellow (color)
 
 
 
