@@ -959,9 +959,13 @@ def grade_calc(dictionary):
 grade_calc(grades)
 
 name = input("What is your name? ").strip().title()
-print(f"Welcome to {name}")  # ✅ Corrected
+print(f"Welcome to {name}")   
 
 
+students = ["Hermione","Harry","Ron"]
+
+for i in range (len(students)):
+    print(i+1,students[i])
 
 
 
