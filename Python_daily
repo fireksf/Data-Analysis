@@ -1001,3 +1001,25 @@ for student in students:
     {"name":"Markos","Address":"Dubai","Age":25},
     {"name":"Winner","Address":"Abudhabi","Age":24}
 
+
+# Simple ATM machine user login code
+
+i = 0
+print ("Welcome:")
+while i <= 3:
+    if i==3:
+        print("Goodbye, Please try another time")
+        break
+    try:
+        x= int(input("Please Enter Your pin Code!"))
+        if x==4321:
+            print("Successfully login")
+            break
+        else: 
+            print(f"Please try Again Attempt {i+1} times")
+        
+    except ValueError:
+        print(f"Please Enter Valid Number, Youre Attampt {i+1} times")
+        #continuet
+        pass
+    i+=1
