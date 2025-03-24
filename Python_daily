@@ -988,4 +988,16 @@ students = [
 for student in students:
     print(student["name"] )
 
+# None is no value in python 
+students = [
+    {"name":"Firaol","Address":"Abudhabi","Age":33},
+    {"name":"Markos","Address":"Dubai","Age":25},
+    {"name":"Winner","Address":"Abudhabi","Age":24}
+]
+for student in students:
+    print(student)
+
+    {"name":"Firaol","Address":"Abudhabi","Age":33},
+    {"name":"Markos","Address":"Dubai","Age":25},
+    {"name":"Winner","Address":"Abudhabi","Age":24}
 
