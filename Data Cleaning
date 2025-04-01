@@ -6,7 +6,7 @@
 -- Always Remeber data is peice of information and sensative, take backup before any change. 
 -- Remember SQL is case sensetive and some function are the same with like words: eg. date is the query and also function. 
 
-CREATE SCHEMA `world_layoffs` ;
+CREATE SCHEMA `world_layoffs` 
 -- import your data in database through the table import withzard 
 
 -- to view imported data 
