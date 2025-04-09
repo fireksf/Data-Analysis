@@ -1,3 +1,25 @@
+import requests
+from bs4 import BeautifulSoup
+
+# Define the URL of the website you want to access
+url = 'https://www.scrapethissite.com/pages/forms/'
+
+# Send an HTTP GET request to the URL
+page= requests.get(url)
+soup = BeautifulSoup(page.text,'html.parser' )
+#print(soup) print entire page 
+div =soup.find('div') # find specific tag
+#print(div)
+
+head =soup.find('head') # find specific tag
+#print(head)
+#lead= soup.find('p',class_='lead').text.strip()
+#print(lead)
+
+lead= soup.find_all('th')
+print(lead)
+
+
 print("Welcome To BMI Calculation\n")
 name= input("What is Your Name ?")
 weight= int(input("Please Enter your Weight ?"))
